@@ -1,14 +1,14 @@
-import Canvas from "../canvas"
-import { Home,Customizer } from "../pages"
+import Canvas from "./canvas"
+import { Home,Customizer } from "./pages"
 
 function App() {
 
   return (
-    <div>
-      <h1 className="head-text">
-        React APP
-      </h1>
-    </div>
+    <main className="app transition-all ease-in">
+      <Home />
+      <Canvas />
+      <Customizer />
+    </main>
   )
 }
 
