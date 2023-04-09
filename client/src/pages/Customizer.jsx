@@ -23,8 +23,8 @@ const Customizer = () => {
   const [generatingImg, setGeneratingImg] = useState("");
 
   const [activeEditorTab, setActiveEditorTab] = useState("");
-  const [activeFilterTab, setactiveFilterTab] = useState({
-    logoshirt : true,
+  const [activeFilterTab, setActiveFilterTab] = useState({
+    logoShirt : true,
     stylishShirt : false
   });
   //show tab content depending of the active tab
@@ -59,7 +59,7 @@ const Customizer = () => {
 
   const handleActiveFilterTab = (tabName) => {
      switch (tabName) {
-      case "logoshirt":
+      case "logoShirt":
         state.isLogoTexture = !activeFilterTab[tabName];
         break;
         case "stylishShirt":
@@ -70,6 +70,15 @@ const Customizer = () => {
         state.isFullTextture = false;
         break;
      }
+
+     //after setting the state , activeFilteryab id updated
+
+     setActiveFilterTab((prevState) => {
+       return {
+          ...prevState,
+          [tabName] : !prevState[tabName]
+       }
+     })
   }
 
   const readFile = (type)=>{
@@ -127,8 +136,8 @@ const Customizer = () => {
                           key={tab.name}
                           tab={tab}
                           isFilterTab
-                          isActiveTab=""
-                          handleClick={()=>{}}
+                          isActiveTab={activeFilterTab[tab.name]}
+                          handleClick={()=> handleActiveFilterTab(tab.name)}
                           />
                       ))
                     }      
