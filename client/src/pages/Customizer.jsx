@@ -62,9 +62,9 @@ const Customizer = () => {
       case "logoShirt":
         state.isLogoTexture = !activeFilterTab[tabName];
         break;
-        case "stylishShirt":
-          state.isFullTextture = !activeFilterTab[tabName];
-          break;
+      case "stylishShirt":
+        state.isFullTextture = !activeFilterTab[tabName];
+        break;
       default:
         state.isLogoTexture = true;
         state.isFullTextture = false;
