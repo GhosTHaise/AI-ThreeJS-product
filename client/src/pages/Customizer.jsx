@@ -35,7 +35,7 @@ const Customizer = () => {
         break;
       case "filepicker":
         return <FilePicker
-          file={File}
+          file={file}
           setFile={setFile}
           readFile={readFile}
         />
