@@ -11,6 +11,7 @@ const config = new Configuration({
     apiKey : process.env.OPENAI_API_KEY
 });
 
+
 const openai = new OpenAIApi(config);
 
 Router.route("/").get((req,res)=>{
@@ -29,9 +30,10 @@ Router.route("/").post(async (req,res)=>{
             size: "1024x1024",
             response_format : "b64_json"
         });
-
-        const image = response.data.date[0].b64_json;
-
+        
+        
+        const image = response.data.data[0].b64_json;
+        
         res.status(200).json({
             photo : image
         });

@@ -28,10 +28,16 @@ const AiPicker = ({
             <>
               <CustomButton
                 type="outline"
-                title="AI Full"
-                handleSubmit={()=> handleSubmit("full")}
+                title="AI Logo"
+                handleClick={()=> handleSubmit("logo")}
                 customStyles="text-xs"
               />
+              <CustomButton
+              type="filled"
+              title="AI Full"
+              handleClick={()=> handleSubmit("full")}
+              customStyles="text-xs"
+            />
             </>
           )}
       </div>
