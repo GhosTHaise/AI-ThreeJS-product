@@ -1,4 +1,4 @@
-#Ai Three JS Product generator
+#Ai + Three JS TShirt Customizer
 
 >Dependencies:
 ```shell
